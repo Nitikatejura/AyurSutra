@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - AyurCare</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="forms.css"> 
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-box">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="AyurCare Logo">
+                <span>AyurCare</span>
+            </a>
+            <h2>Create Your Account</h2>
+
+            <form id="signup-form">
+
+                <div class="form-group">
+                    <label for="centre-select">Select Centre</label>
+                    <select id="centre-select" required>
+                        <option value="">-- Please choose a centre --</option>
+                        <option value="centre1">AyurCare Mumbai</option>
+                        <option value="centre2">AyurCare Delhi</option>
+                        <option value="centre3">AyurCare Bangalore</option>
+                    </select>
+                </div>
+
+                <div id="signup-fields" style="display: none;">
+
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="user-type">I am a...</label>
+                        <select id="user-type" required>
+                            <option value="">-- Select user type --</option>
+                            <option value="patient">Patient</option>
+                            <option value="doctor">Doctor</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" required>
+                    </div>
+
+                    <div class="form-group-terms">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">
+                            I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary full-width">Create Account</button>
+                </div>
+
+            </form>
+
+            <p class="form-link">Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Wait for the page to load
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // Get the elements we need
+            const centreSelect = document.getElementById('centre-select');
+            const hiddenFields = document.getElementById('signup-fields');
+            const signupForm = document.getElementById('signup-form');
+            const password = document.getElementById('password');
+            const confirmPassword = document.getElementById('confirm-password');
+
+            // 1. Show/Hide fields logic
+            centreSelect.addEventListener('change', function() {
+                // 'this.value' is the selected option's value
+                if (this.value !== "") {
+                    // If a centre is chosen, show the fields
+                    hiddenFields.style.display = 'block';
+                } else {
+                    // If they un-select (choose the default), hide them
+                    hiddenFields.style.display = 'none';
+                }
+            });
+
+            // 2. Form submission logic (Password Check)
+            signupForm.addEventListener('submit', function(event) {
+                // Check if passwords match
+                if (password.value !== confirmPassword.value) {
+                    // If they don't match:
+                    alert("Passwords do not match. Please try again.");
+                    // Stop the form from submitting
+                    event.preventDefault(); 
+                }
+                // If they do match, the form will submit normally.
+            });
+
+        });
+    </script>
+
+</body>
+</html>

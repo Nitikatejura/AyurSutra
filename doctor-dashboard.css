@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Portal - Dashboard</title>
+    <link rel="stylesheet" href="doctor-style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <nav class="top-nav">
+            <div class="logo-container">
+                <div class="logo"></div> 
+                <div class="logo-text">
+                    <strong>AyurCare</strong>
+                    <span>Doctor Portal</span>
+                </div>
+            </div>
+
+            <div class="nav-icons">
+                <span>🔔</span>
+                <span>⚙️</span>
+                <span>➡️</span>
+            </div>
+        </nav>
+
+        <main>
+            
+            <section class="welcome-header-doctor">
+                <div>
+                    <h1>Good morning, Dr. Nitika</h1>
+                    <p>Ready to provide healing and wellness to your patients today</p>
+                </div>
+                <div class="doctor-badge">
+                    <img src="https://via.placeholder.com/50x50.png?text=Dr" alt="Dr. Nitika">
+                    <span>Certified Ayurvedic Practitioner</span>
+                </div>
+            </section>
+
+            <section class="stats-grid-doctor">
+                <div class="stat-card">
+                    <div class="stat-card-content">
+                        <h3>Patients Today</h3>
+                        <p>8</p>
+                    </div>
+                    <span class="stat-card-icon">👥</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-content">
+                        <h3>Ongoing Therapies</h3>
+                        <p>24</p>
+                    </div>
+                    <span class="stat-card-icon">💓</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-content">
+                        <h3>Appointments</h3>
+                        <p>5</p>
+                    </div>
+                    <span class="stat-card-icon">📅</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-content">
+                        <h3>Pending Approvals</h3>
+                        <p>3</p>
+                    </div>
+                    <span class="stat-card-icon orange">⚠️</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-content">
+                        <h3>Recovery Rate</h3>
+                        <p>92%</p>
+                    </div>
+                    <span class="stat-card-icon">📈</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-content">
+                        <h3>Compliance</h3>
+                        <p>88%</p>
+                    </div>
+                    <span class="stat-card-icon">✅</span>
+                </div>
+            </section>
+
+            <nav class="main-tabs">
+                <a href="#dashboard" class="tab-link active" data-tab="dashboard">Dashboard</a>
+                <a href="#patients" class="tab-link" data-tab="patients">Patients</a>
+                <a href="#calendar" class="tab-link" data-tab="calendar">Calendar</a>
+                <a href="#feedback" class="tab-link" data-tab="feedback">Feedback</a>
+                <a href="#analytics" class="tab-link" data-tab="analytics">Analytics</a>
+            </nav>
+
+            <div class="tab-content-wrapper">
+
+                <div id="dashboard" class="tab-content active">
+                    <div class="dashboard-layout">
+                        
+                        <div class="dashboard-main-column">
+                            <div class="content-card">
+                                <h2 class="card-title">Today's Schedule</h2>
+                                <p class="card-subtitle">Your appointments for today</p>
+                                <div class="schedule-list">
+                                    <div class="schedule-item">
+                                        <div class="schedule-time">
+                                            <strong>9:00 AM</strong>
+                                            <span>60 min</span>
+                                        </div>
+                                        <div class="schedule-details">
+                                            <strong>Raj Kumar</strong>
+                                            <span>Panchakarma</span>
+                                        </div>
+                                        <div class="schedule-status">
+                                            <span class="status-badge pending">pending</span>
+                                            <span class="status-action">Action Required</span>
+                                        </div>
+                                    </div>
+                                    <div class="schedule-item">
+                                        <div class="schedule-time">
+                                            <strong>10:30 AM</strong>
+                                            <span>45 min</span>
+                                        </div>
+                                        <div class="schedule-details">
+                                            <strong>Priya Sharma</strong>
+                                            <span>Abhyanga</span>
+                                        </div>
+                                        <div class="schedule-status">
+                                            <span class="status-badge confirmed">confirmed</span>
+                                        </div>
+                                    </div>
+                                    <div class="schedule-item">
+                                        <div class="schedule-time">
+                                            <strong>2:00 PM</strong>
+                                            <span>30 min</span>
+                                        </div>
+                                        <div class="schedule-details">
+                                            <strong>Amit Patel</strong>
+                                            <span>Consultation</span>
+                                        </div>
+                                        <div class="schedule-status">
+                                            <span class="status-badge pending">pending</span>
+                                            <span class="status-action">Action Required</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="content-card">
+                                <h2 class="card-title">Recent Activity</h2>
+                                <div class="activity-list">
+                                    <div class="activity-item">
+                                        <span class="activity-icon completed">✅</span>
+                                        <p><strong>Completed Panchakarma session</strong><br>Rajesh Kumar - 2 hours ago</p>
+                                    </div>
+                                    <div class="activity-item">
+                                        <span class="activity-icon new-patient">➕</span>
+                                        <p><strong>New patient registration</strong><br>Meera Singh - 3 hours ago</p>
+                                    </div>
+                                    <div class="activity-item">
+                                        <span class="activity-icon milestone">📈</span>
+                                        <p><strong>Patient recovery milestone</strong><br>Priya Sharma reached 75% recovery - 5 hours ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-sidebar-column">
+                            <div class="content-card">
+                                <h2 class="card-title">Quick Actions</h2>
+                                <div class="quick-actions-list">
+                                    <a href="#" class="action-link add-patient"><span>➕</span> Add New Patient</a>
+                                    <a href="#" class="action-link"><span>📅</span> Schedule Session</a>
+                                    <a href="#" class="action-link"><span>🩺</span> Approve Therapy</a>
+                                    <a href="#" class="action-link"><span>📄</span> Download Reports</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <div id="patients" class="tab-content">
+                    <div class="content-card">
+                        <div class="patient-header">
+                            <div>
+                                <h2 class="card-title">Patient Management</h2>
+                                <p class="card-subtitle">Manage your patient records and therapy plans</p>
+                            </div>
+                            <a href="#" class="btn-primary"><span>➕</span> Add Patient</a>
+                        </div>
+                        <div class="patient-controls">
+                            <input type="text" class="search-bar" placeholder="Search patients...">
+                            <button class="btn-secondary"><span>Filter</span></button>
+                        </div>
+                        <table class="patient-table">
+                            <thead>
+                                <tr>
+                                    <th>Patient Name</th>
+                                    <th>Therapy Type</th>
+                                    <th>Status</th>
+                                    <th>Progress</th>
+                                    <th>Sessions</th>
+                                    <th>Dosha</th>
+                                    <th>Next Appointment</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Raj Kumar</td>
+                                    <td>Panchakarma Therapy</td>
+                                    <td><span class="status-dot ongoing">Ongoing</span></td>
+                                    <td><div class="progress-bar-table"><div style="width: 60%;"></div></div> 60%</td>
+                                    <td>6/10</td>
+                                    <td><span class="dosha-badge vata">Vata</span></td>
+                                    <td>Today, 9:00 AM</td>
+                                    <td><button class="btn-tertiary">View</button><button class="btn-primary-outline">Edit</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Priya Sharma</td>
+                                    <td>Abhyanga Therapy</td>
+                                    <td><span class="status-dot ongoing">Ongoing</span></td>
+                                    <td><div class="progress-bar-table"><div style="width: 80%;"></div></div> 80%</td>
+                                    <td>8/10</td>
+                                    <td><span class="dosha-badge pitta">Pitta</span></td>
+                                    <td>Today, 10:30 AM</td>
+                                    <td><button class="btn-tertiary">View</button><button class="btn-primary-outline">Edit</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Amit Patel</td>
+                                    <td>Shirodhara Therapy</td>
+                                    <td><span class="status-dot scheduled">Scheduled</span></td>
+                                    <td><div class="progress-bar-table"><div style="width: 40%;"></div></div> 40%</td>
+                                    <td>4/10</td>
+                                    <td><span class="dosha-badge kapha">Kapha</span></td>
+                                    <td>Jan 25, 11:00 AM</td>
+                                    <td><button class="btn-tertiary">View</button><button class="btn-primary-outline">Edit</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div> <div id="calendar" class="tab-content">
+                    <div class="content-card">
+                        <h2 class="card-title">Appointment Calendar</h2>
+                        <p class="card-subtitle">Weekly view of your scheduled appointments</p>
+                        <div class="calendar-grid">
+                            <div class="calendar-day">
+                                <h3>Mon</h3>
+                                <div class="calendar-appointment confirmed"><strong>09:00</strong> - Rajesh Kumar</div>
+                                <div class="calendar-appointment confirmed"><strong>10:30</strong> - Priya Sharma</div>
+                            </div>
+                            <div class="calendar-day">
+                                <h3>Tue</h3>
+                                <div class="calendar-appointment pending"><strong>11:00</strong> - Amit Patel</div>
+                            </div>
+                            <div class="calendar-day">
+                                <h3>Wed</h3>
+                                <div class="calendar-appointment confirmed"><strong>14:00</strong> - Meera Singh</div>
+                            </div>
+                            <div class="calendar-day"><h3>Thu</h3></div>
+                            <div class="calendar-day"><h3>Fri</h3></div>
+                            <div class="calendar-day"><h3>Sat</h3></div>
+                            <div class="calendar-day"><h3>Sun</h3></div>
+                        </div>
+                        <div class="calendar-legend">
+                            <div><span classs="legend-dot confirmed"></span> Confirmed</div>
+                            <div><span classs="legend-dot pending"></span> Pending</div>
+                            <div><span classs="legend-dot cancelled"></span> Cancelled</div>
+                        </div>
+                    </div>
+                </div> <div id="feedback" class="tab-content">
+                    <div class="content-card">
+                        <div class="feedback-header">
+                            <div>
+                                <h2 class="card-title">Patient Feedback</h2>
+                                <p class="card-subtitle">Reviews and feedback from your patients</p>
+                            </div>
+                            <div class="rating-summary">
+                                <span>⭐</span> <strong>4.8</strong> (3 reviews)
+                            </div>
+                        </div>
+                        <div class="feedback-list">
+                            <div class="feedback-item">
+                                <span class="feedback-user-icon">👤</span>
+                                <div class="feedback-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
+                                </div>
+                                <div class="feedback-rating">⭐⭐⭐⭐⭐</div>
+                            </div>
+                            <div class="feedback-item">
+                                <span class="feedback-user-icon">👤</span>
+                                <div class="feedback-content">
+                                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ...</p>
+                                </div>
+                                <div class="feedback-rating">⭐⭐⭐⭐☆</div>
+                            </div>
+                            <div class="feedback-item">
+                                <span class="feedback-user-icon">👤</span>
+                                <div class="feedback-content">
+                                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris... </p>
+                                </div>
+                                <div class="feedback-rating">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <div id="analytics" class="tab-content">
+                    <div class="analytics-layout">
+                        <div class="content-card">
+                            <h2 class="card-title">Recovery Trends</h2>
+                            <ul class="analytics-list">
+                                <li><span>Panchakarma Therapy</span><strong>94% success rate</strong></li>
+                                <li><span>Abhyanga Therapy</span><strong>89% success rate</strong></li>
+                                <li><span>Shirodhara Therapy</span><strong>91% success rate</strong></li>
+                            </ul>
+                        </div>
+                        <div class="content-card">
+                            <h2 class="card-title">Patient Distribution</h2>
+                            <ul class="analytics-list">
+                                <li><span>Vata Dosha</span><strong>35%</strong></li>
+                                <li><span>Pitta Dosha</span><strong>40%</strong></li>
+                                <li><span>Kapha Dosha</span><strong>25%</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> </div> </main>
+    </div>
+
+    <script src="doctor-script.js"></script>
+
+</body>
+</html>

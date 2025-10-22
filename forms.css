@@ -1,0 +1,109 @@
+/* Use the same green background as the main page */
+body {
+    background-color: #F7FEFD; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-container {
+    padding: 20px;
+}
+
+.form-box {
+    max-width: 450px;
+    width: 100%;
+    background: #FFFFFF;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 77, 64, 0.05);
+    text-align: center;
+}
+
+.form-box .logo {
+    justify-content: center; /* Center the logo */
+    margin-bottom: 24px;
+}
+
+.form-box h2 {
+    color: #004D40; /* Dark Green */
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* UPDATED: This style now applies to both input AND select */
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #DDD;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    /* This makes the select dropdown look consistent */
+    background-color: white; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Add a dropdown arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+}
+
+/* NEW: Style for the Terms & Conditions checkbox */
+.form-group-terms {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-group-terms input[type="checkbox"] {
+    width: 16px; /* Make checkbox a normal size */
+    height: 16px;
+    accent-color: #11A37F; /* Make the checkmark green */
+}
+
+.form-group-terms label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+}
+
+.form-group-terms a {
+    color: #11A37F;
+    font-weight: 600;
+}
+
+.btn.full-width {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.form-link {
+    margin-top: 24px;
+    font-size: 15px;
+}
+
+.form-link a {
+    color: #11A37F; /* Primary Green */
+    font-weight: 600;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <div class="container">
+
+        <nav class="top-nav">
+            <div class="logo-container">
+                <div class="logo"></div> 
+                <div class="logo-text">
+                    <strong>AyurCare</strong>
+                    <span id="text-portal-subtitle">Patient Portal</span>
+                </div>
+            </div>
+
+            <div class="nav-icons">
+                <div class="lang-selector-wrapper">
+                    <span>🌍</span>
+                    <select id="lang-select" name="language" class="lang-selector">
+                        <option value="en" selected>English</option>
+                        <option value="hi">हिन्दी</option>
+                    </select>
+                </div>
+                <span>🔔</span>
+                <span>⚙️</span>
+                <span>➡️</span>
+            </div>
+        </nav>
+
+        <main>
+            
+            <section class="welcome-header">
+                <div>
+                    <h1 id="text-welcome">Welcome back, User</h1>
+                    
+                    <p id="text-patient-id">Patient ID: DEMO-176</p>
+                </div>
+                <span class="status-badge" id="text-status">Active Patient</span>
+            </section>
+
+            <nav class="main-tabs">
+                <a href="#overview" class="tab-link active" data-tab="overview" id="tab-overview">Overview</a>
+                <a href="#sessions" class="tab-link" data-tab="sessions" id="tab-sessions">Sessions</a>
+                <a href="#progress" class="tab-link" data-tab="progress" id="tab-progress">Progress</a>
+                <a href="#feedback" class="tab-link" data-tab="feedback" id="tab-feedback">Feedback</a>
+            </nav>
+
+            <div class="tab-content-wrapper">
+
+                <div id="overview" class="tab-content active">
+                    
+                    <section class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-card-content">
+                                <h3 id="text-current-therapy">Current Therapy</h3>
+                                <p id="data-therapy-name">Panchakarma</p>
+                            </div>
+                            <span class="stat-card-icon">💓</span>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card-content">
+                                <h3 id="text-sessions-completed">Sessions Completed</h3>
+                                <p id="data-sessions">8/12</p>
+                            </div>
+                            <span class="stat-card-icon">✅</span>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card-content">
+                                <h3 id="text-next-session">Next Session</h3>
+                                <p id="data-next-session">Tomorrow</p>
+                            </div>
+                            <span class="stat-card-icon">📅</span>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card-content">
+                                <h3 id="text-recovery-score">Recovery Score</h3>
+                                <p id="data-recovery-score">75%</p>
+                            </div>
+                            <span class="stat-card-icon">📈</span>
+                        </div>
+                    </section>
+
+                    <section class="content-row">
+                        <div class="progress-card">
+                            <h2 id="text-progress-title"><span>🩺</span>Current Therapy Progress</h2>
+                            <div class="progress-header">
+                                <h3 id="data-program-name">Panchakarma Detox Program</h3>
+                                <span class="progress-badge" id="data-session-count">8/12 sessions</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill" style="width: 66.6%;"></div>
+                            </div>
+                            <div class="progress-details">
+                                <div class="progress-detail-item">
+                                    <strong id="text-recovery-score-label">Recovery Score</strong>
+                                    <p id="data-recovery-score-2">75%</p>
+                                </div>
+                                <div class="progress-detail-item">
+                                    <strong id="text-milestone-label">Next Milestone</strong>
+                                    <p id="data-milestone">Complete Phase 2</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wellness-card">
+                            <img src="images/wellness-meditation.jpg" alt="Man meditating">
+                            <div class="wellness-content">
+                                <h3 id="text-wellness-title">Today's Wellness Tip</h3>
+                                <p id="text-wellness-desc">Drink warm water with lemon in the morning to support your digestive fire (Agni) and enhance detoxification.</p>
+                                <button class="btn-learn-more" id="text-learn-more">Learn More</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="notifications" style="margin-top: 24px;">
+                        <div class="notification-bar">
+                            <span>⏰</span>
+                            <span id="text-notification-1">Upcoming session tomorrow at 10:00 AM</span>
+                        </div>
+                        <div class="notification-bar">
+                            <span>📊</span>
+                            <span id="text-notification-2">Your therapy progress report is ready</span>
+                        </div>
+                        <div class="notification-bar">
+                            <span>📝</span>
+                            <span id="text-notification-3">Please complete your weekly health assessment</span>
+                        </div>
+                    </section>
+                </div> <div id="sessions" class="tab-content">
+                    <div class="placeholder-card">
+                        <h2 id="text-sessions-title">Your Sessions</h2>
+                        <p id="text-sessions-desc">A list of your past and upcoming sessions will appear here.</p>
+                    </div>
+                </div> <div id="progress" class="tab-content">
+                    <div class="placeholder-card">
+                        <h2 id="text-progress-page-title">Your Progress</h2>
+                        <p id="text-progress-desc">Detailed charts and graphs of your recovery progress will appear here.</p>
+                    </div>
+                </div> <div id="feedback" class="tab-content">
+                    <div class="feedback-container">
+                        
+                        <div class="feedback-form-container">
+                            <h2 id="text-feedback-title">Submit Your Feedback</h2>
+                            <form id="feedback-form" action="/submit-feedback" method="post">
+                                <label for="feedback-text" id="text-feedback-label">How are you feeling about your progress?</label>
+                                <textarea id="feedback-text" name="feedback" rows="6" placeholder="Type your feedback here..." required></textarea>
+                                <button type="submit" id="text-feedback-submit">Submit</button>
+                            </form>
+                        </div>
+
+                        <div class="feedback-list-container">
+                            <h3 id="text-feedback-history">Your Feedback History</h3>
+                            <div id="feedback-list">
+                                </div>
+                        </div>
+
+                    </div>
+                </div> </div> </main>
+    </div>
+
+    <script src="translate.js"></script>
+
+</body>
+</html>

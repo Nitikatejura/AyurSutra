@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Using a similar style to your signup page */
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            display: grid; 
+            place-items: center; 
+            min-height: 90vh; 
+            background-color: #f4f7f6;
+            margin: 0;
+        }
+        
+        form { 
+            background: #ffffff;
+            border: 1px solid #ccc; 
+            padding: 25px 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            width: 320px;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        div.form-group { 
+            margin-bottom: 18px; 
+        }
+        
+        label { 
+            display: block; 
+            margin-bottom: 6px; 
+            font-weight: 600; 
+            font-size: 0.9rem;
+        }
+        
+        input[type="text"], 
+        input[type="email"], 
+        input[type="password"] { 
+            width: 100%; 
+            padding: 10px; 
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box; /* Important */
+        }
+        
+        /* Styles for the new Role Selector */
+        div.role-selector {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        div.role-selector label {
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+            font-size: 0.95rem;
+        }
+
+        div.role-selector input[type="radio"] {
+            margin-right: 6px;
+        }
+
+
+        button { 
+            width: 100%; 
+            padding: 12px; 
+            background-color: #007bff; 
+            color: white; 
+            border: none; 
+            cursor: pointer; 
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form id="login-form" action="/login-placeholder" method="post">
+        <h2>Login</h2>
+
+        <div class="form-group role-selector">
+            <label for="role-patient">
+                <input type="radio" id="role-patient" name="role" value="patient" checked>
+                Patient
+            </label>
+            <label for="role-doctor">
+                <input type="radio" id="role-doctor" name="role" value="doctor">
+                Doctor
+            </label>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email or Username:</label>
+          <input type="text" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        
+        <div class="form-group">
+            <button type="submit">Login</button>
+        </div>
+        
+    </form>
+
+    <script>
+        // 1. Find the form on the page using its ID
+        const loginForm = document.getElementById('login-form');
+
+        // 2. Add an event listener to run a function when the form is "submitted"
+        loginForm.addEventListener('submit', function(event) {
+            
+            // 3. STOP the form from submitting the normal HTML way
+            event.preventDefault();
+
+            // 4. Find out which radio button is checked
+            // This searches inside the form for the input named 'role' that is ':checked'
+            const selectedRole = loginForm.querySelector('input[name="role"]:checked').value;
+
+            // 5. Check the value and redirect the browser
+            if (selectedRole === 'doctor') {
+                
+                // ---
+                // In a REAL app, you would first check the password on a server.
+                // ---
+                console.log('Logging in as a doctor...');
+                window.location.href = 'doctor-dashboard.html'; // Sends user to the doctor page
+
+            } else {
+                
+                // ---
+                // In a REAL app, you would first check the password on a server.
+                // ---
+                console.log('Logging in as a patient...');
+                window.location.href = 'patient-dashboard.html'; // Sends user to the patient page
+            }
+        });
+    </script>
+
+</body>
+</html>
